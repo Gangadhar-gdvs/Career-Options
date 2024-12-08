@@ -1,0 +1,104 @@
+.footer-container {
+  background: linear-gradient(to right, #2c3e50, #409376);
+  color: #fff;
+  padding-top: 2rem !important;
+  padding: 1rem 1rem;
+  font-family: 'Arial', sans-serif;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-section, .social-media {
+  flex: 1;
+  min-width: 300px;
+  /* margin-bottom: 2rem; */
+}
+.section-title, .social-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+.section-title::after, .social-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #f39c12;
+  transition: width 0.3s ease;
+}
+.section-title:hover::after, .social-title:hover::after {
+  width: 100%;
+}
+.section-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+.contact-item:hover {
+  transform: translateX(10px);
+}
+.icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.social-icon {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.footer-container {
+  animation: fadeIn 1s ease-out;
+}
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .contact-section, .social-media {
+    margin-bottom: 2rem;
+  }
+}

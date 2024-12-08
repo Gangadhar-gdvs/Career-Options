@@ -1,0 +1,153 @@
+/* .Tabs_Container{
+  display:inline;
+} */
+  .Das_tabs {
+    width: 200px;
+    background-color: #2c3e50;
+    padding: 20px;
+    color: #fff;
+    height: 100vh;
+    position:fixed;
+    top: 5;
+    left: 0;
+  }
+  
+  .Das_tabs .Das_tab {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background:linear-gradient(rgb(28, 197, 155),  rgb(54, 104, 179));
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  .Das_Sub_tabs{
+ padding-top: 1rem;
+    margin-left: 12rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow:1px 1px 5px rgba(0,0,0,0.2);
+    padding-bottom: 1rem;
+  }
+  .btn_tab.active {
+    border-bottom: 3px solid #029734; /* Blue underline for active tab */
+  }
+  .Das_tab-button{
+    border-radius: 5%;
+    margin-left: 2rem;
+    font-weight: 600;
+    color: rgb(9, 124, 76);
+    background: none;
+    border: none;
+    transition: transform 0.3s ease ;
+  }
+  .Das_tab-button:hover{
+    transform: scale(1.1);
+    color: #035026;
+  }
+ 
+  .Das_tab-button::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #029734;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+  }
+  .Das_tab-button:hover::after{
+    width: 100%;
+  }
+  /* .Das_tabs .Das_tab:hover,
+  .Das_tabs .Das_tab.active  {
+   
+    background-color: #3498db;
+  } */
+  .Das_tabs .Das_link:hover {
+    color: rgb(255, 255, 255);
+  }
+  .Das_tabs .Das_link {
+    color: #000000;
+    font-weight:600;
+    text-decoration: none;
+  }
+  
+  .Das_tab_drop {
+    padding: 1px;
+    margin-top: 1rem;
+    margin-left:-0.6rem ;
+    margin-right: -0.6rem;
+   
+    cursor: pointer;
+    background:linear-gradient(rgb(28, 197, 155),  rgb(54, 104, 179));
+    text-align: center;
+    font-size: 18px;
+    /* border-radius: 5px; */
+  }
+  .Das_link_drop{
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+   color: black;
+   font-weight: 600;
+   border-top: 1px solid rgba(255, 255, 255, 0.425);
+  }
+.Das_link_drop:hover{
+  
+  color: white;
+}
+  .tabs .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Tab button categories */
+  .tabs .tab-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .tabs .tab-button:hover,
+  .tabs .tab-button.active {
+    background-color: #3498db;
+  }
+  
+  /* Active state for tab buttons */
+  .tabs .tab-button.active {
+    font-weight: bold;
+  }
+  
+  /* Main content area (right side of sidebar) */
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+    background-color: #ecf0f1;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .tabs {
+      width: 100%;
+      height: auto;
+      position: static;
+      background-color: #34495e;
+    }
+    .tabs .tab-button {
+      width: auto;
+    }
+    .main-content {
+      margin-left: 0;
+    }
+  }
+  

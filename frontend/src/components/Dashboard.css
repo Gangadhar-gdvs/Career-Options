@@ -1,0 +1,79 @@
+
+  /* Sidebar Styles */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #2f3d48;
+    color: white;
+    padding: 15px;
+  }
+  
+  .sidebar .nav-tabs .nav-link {
+    color: white;
+    border: none;
+    background-color: #2f3d48;
+  }
+  
+  .sidebar .nav-tabs .nav-link.active {
+    background-color: #007bff;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #0069d9;
+  }
+  
+  /* Content Styles */
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .content p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Flexbox layout for Sidebar and Content */
+  .d-flex {
+    margin-top: 7.2%;
+    display: flex;
+    height: calc(100vh - 60px); /* Adjusting for navbar height */
+  }
+  
+  /* Making the layout responsive */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .d-flex {
+      flex-direction: column;
+    }
+  
+    .content {
+      padding: 10px;
+    }
+  
+    footer {
+      padding: 15px 0;
+    }
+  }
+  

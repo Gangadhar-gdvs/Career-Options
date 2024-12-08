@@ -1,0 +1,128 @@
+/* General Container */
+.career-details {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  
+  /* Course List */
+  .course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .course-item {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .course-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .course-item h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .course-item p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  /* Specialization List */
+  .specialization-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .specialization-list h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .specialization-item {
+    background-color: #e8f5fe;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .specialization-item:hover {
+    background-color: #b3e0ff;
+    transform: translateX(10px);
+  }
+  
+  /* Specialization Details */
+  .specialization-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .specialization-details h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .specialization-details p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .career-details {
+      padding: 15px;
+    }
+  
+    .course-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .course-item h3 {
+      font-size: 1.1rem;
+    }
+  
+    .specialization-list {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .course-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .course-item {
+      padding: 15px;
+    }
+  
+    .specialization-list {
+      padding: 10px;
+    }
+  }
+  

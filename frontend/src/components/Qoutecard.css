@@ -1,0 +1,74 @@
+/* Quote Card Styling */
+.quote-card {
+    background:none;
+    padding: 2rem;
+    margin-top: 170px;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  
+  .quote-text {
+    font-size: 50px; /* Increased quote size */
+    font-weight: bold;
+    color: #bbebe4; /* Dark color for the quote */
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 1.5rem;
+    /* animation: colorChange 5s infinite alternate; */
+  }
+  @keyframes colorChange {
+    0% { color: #2c3e50; }
+    50% { color: #3c59e7; }
+    100% { color: #34aedb; }
+  }
+  .quote-card:hover {
+    transform: scale(1.05); /* Slight scaling effect on hover */
+  }
+    
+  .get-started-btn {
+    background:transparent !important;
+    color: white;
+    border:1px solid rgb(9, 145, 9) !important;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease,transform 0.3s ease;
+    position: relative;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #00ccf559 !important;
+    transform: scale(1.1);
+
+  }
+  .get-started-btn::before {
+    content: 'Get Started';  /* Default text */
+    transition: opacity 0.3s ease;
+}
+
+.get-started-btn:hover::before {
+    opacity: 0;  /* Hide default text on hover */
+}
+  .get-started-btn:active {
+    background-color: #1f7040;
+  }
+  
+  /* Change button text to down arrow when hovering */
+  .get-started-btn:hover::after {
+    content: '➦';
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+  }

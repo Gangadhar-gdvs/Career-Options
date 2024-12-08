@@ -1,0 +1,61 @@
+.login-overlay{
+   top: 8%;
+  left: 0;
+
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Card styles */
+.login-card {
+  width: 90%;
+  max-width: 350px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon styles */
+.login-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 12px;
+}
+
+/* Form labels */
+.form-label {
+  font-size: 14px;
+  color: #5483a0;
+}
+
+/* Buttons */
+.btn-success {
+  background-color: #15917e;
+  color: white;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #13a086;
+}
+
+.btn-secondary {
+  border-radius: 20px;
+}
+
+/* Alert message styles */
+.alert {
+  font-size: 14px;
+  padding: 10px 15px;
+}
