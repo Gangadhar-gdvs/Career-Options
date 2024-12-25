@@ -1,8 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './About.css';
-
-function About( {contactRef}) {
-  const [isHovered, setIsHovered] = useState(false);
+import jeevan from '../images/jeevan.jpg';
+// import chandra from "../images/chandra.jpg"
+import yaswanth from "../images/yaswanth.jpg"
+import gangadhar from "../images/gangadhar.jpg"
+import preethi from "../images/preethi.jpg"
+// import deepika from "../images/deepika.jpg"
+// import sravani from "../images/sravani.jpg"
+function About({ contactRef }) {
+  const teamMembers = [
+    { name: 'R Jeevan', photo: jeevan },
+    // { name: 'K Chandra', photo: chandra },
+    { name: 'A Yashwanth Reddy', photo: yaswanth },
+    { name: 'G Gangadhar', photo: gangadhar },
+    { name: 'G Preethi', photo: preethi },
+    // { name: 'N Deepika', photo: deepika},
+    // { name: 'V Sravani', photo: sravani },
+  ];
 
   return (
     <div ref={contactRef} className="about-container">
@@ -10,49 +24,34 @@ function About( {contactRef}) {
         <h1 className="about-title">
           About Us <span className="wave">👋</span>
         </h1>
-        <div className="about-description">
-          <p className="fade-in">
-            Welcome to CareerCare 🧭, your exciting guide in navigating the world of career opportunities! 
-            We're on a mission to empower you to reach for the stars 🌟 in your professional journey.
-          </p>
-          {/* <div className="image-container">
-          <div className="team-info" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-            <div className="team-column">
-              <p>R Jeevan</p>
-              <p>K Chandra</p>
-              <p>A Yashwanth Reddy</p>
-            </div>
-            <div className="team-column">
-              <p>G Gangadhar</p>
-              <p>G Preethi</p>
-              <p>N Deepika</p>
-              <p>V Sravani</p>
-            </div>
-          </div>
+        <p className="fade-in">
+          Welcome to CareerCare 🧭, your exciting guide in navigating the world of career opportunities! 
+          We're on a mission to empower you to reach for the stars 🌟 in your professional journey.
+        </p>
 
-
-            {/* <img 
-              src="/placeholder.svg?height=200&width=300" 
-              alt="Team of diverse professionals" 
-              className="team-image"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            /> */}
-            {/* {isHovered && <div className="image-overlay">Our Awesome Team!</div>}
-          </div> */}
-          <p className="slide-in">
-            At CareerCompass, we believe in:
-          </p>
-          <ul className="feature-list">
-            <li className="bounce-in">🚀 Launching careers that inspire</li>
-            <li className="bounce-in">🎓 Illuminating paths for continuous learning</li>
-            <li className="bounce-in">💼 Connecting talents with dream opportunities</li>
-            <li className="bounce-in">🌈 Celebrating diversity in career choices</li>
-          </ul>
-          <p className="typing-effect">
-            Ready to embark on an exciting career adventure? Let's get started! 🎉
-          </p>
+        <div className="team-container">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="team-member">
+              <img 
+                src={member.photo} 
+                alt={member.name} 
+                className="team-photo" 
+              />
+              <p className="team-name">{member.name}</p>
+            </div>
+          ))}
         </div>
+
+        <p className="slide-in">At CareerCompass, we believe in:</p>
+        <ul className="feature-list">
+          <li className="bounce-in">🚀 Launching careers that inspire</li>
+          <li className="bounce-in">🎓 Illuminating paths for continuous learning</li>
+          <li className="bounce-in">💼 Connecting talents with dream opportunities</li>
+          <li className="bounce-in">🌈 Celebrating diversity in career choices</li>
+        </ul>
+        <p className="typing-effect">
+          Ready to embark on an exciting career adventure? Let's get started! 🎉
+        </p>
       </div>
     </div>
   );
