@@ -1,21 +1,21 @@
 import React from 'react';
 import './About.css';
 import jeevan from '../images/jeevan.jpg';
-// import chandra from "../images/chandra.jpg"
+import chandra from "../images/chandra.jpg"
 import yaswanth from "../images/yaswanth.jpg"
 import gangadhar from "../images/gangadhar.jpg"
 import preethi from "../images/preethi.jpg"
-// import deepika from "../images/deepika.jpg"
-// import sravani from "../images/sravani.jpg"
+import deepika from "../images/deepika.jpg"
+import sravani from "../images/sravani.jpg"
 function About({ contactRef }) {
   const teamMembers = [
     { name: 'R Jeevan', photo: jeevan },
-    // { name: 'K Chandra', photo: chandra },
+    { name: 'K Chandra', photo: chandra },
     { name: 'A Yashwanth Reddy', photo: yaswanth },
     { name: 'G Gangadhar', photo: gangadhar },
     { name: 'G Preethi', photo: preethi },
-    // { name: 'N Deepika', photo: deepika},
-    // { name: 'V Sravani', photo: sravani },
+    { name: 'N Deepika', photo: deepika},
+    { name: 'V Sravani', photo: sravani },
   ];
 
   return (
